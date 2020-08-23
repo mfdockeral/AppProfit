@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppProfit.MenuPrincipalDetail"
+             Title="Menu de Mercaderista">
+  <StackLayout Padding="10" BackgroundColor="Red">
+        
+
+            <!--Label Text="Bienvenido Usuario" x:Name="LogUser" Style="{StaticResource Key=EstiloDeEtiquetas}"/-->
+            <!--Seccion Botones-->
+            <Button Text="Formulario de Mantenimiento" x:Name="BtnForm" 
+                    Clicked="BtnForm_Clicked"  Style="{StaticResource Key=EstiloDeBoton}"/>
+
+            <Button Text="Formulario de Precios" x:Name="BtnFromPrec" 
+                    Clicked="BtnFromPrec_Clicked"  Style="{StaticResource Key=EstiloDeBoton}"/>
+
+            <Button Text="Estadísticas" x:Name="BtnFromEst" 
+                    Clicked="BtnFromEst_Clicked"  Style="{StaticResource Key=EstiloDeBoton}"/>
+       
+
+    </StackLayout>
+</ContentPage>

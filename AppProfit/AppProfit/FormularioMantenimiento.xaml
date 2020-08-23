@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             mc:Ignorable="d"
+             x:Class="AppProfit.FormularioMantenimiento">
+
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          VerticalOptions="Center"
+          Spacing="10">
+            <Label
+               Text="Formulario de Mantenimiento"
+               FontSize="24"
+               TextColor="White"
+                FontFamily="Body"
+               VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Red">
+            <Label x:Name="SeccionPickerC" Text="Favor Seleccionar Colmado" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <Picker x:Name="SBColmados" SelectedIndex ="{Binding Colmados}" Title="***SELECCIONAR***" BackgroundColor="White">
+                <Picker.Items>
+                    <x:String>Prueba1</x:String>
+                    <x:String>Prueba2</x:String>
+                    <x:String>Prueba3</x:String>
+                    <x:String>Prueba4</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label x:Name="SeccionPickerE" Text="ESTADO DEL COLMADO" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+            
+                <Picker x:Name="SBEstadoC" SelectedIndex="{Binding Estado}" Title="***SELECCIONAR***" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>Mantenimiento</x:String>
+                        <x:String>Colmado quebrado</x:String>
+                        <x:String>Ventana quitada</x:String>
+                        <x:String>Colmado cerrado</x:String>
+                        <x:String>No permitio pasar</x:String>
+                    </Picker.Items>
+                </Picker>
+            
+            <Label x:Name="SeccionRbDC" Text="DISPOSICIÓN DEL COLMADERO" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+            
+            <Label x:Name="LBPreg1" Text="¿Deja pasar?" Style="{StaticResource Key=EstiloDeEtiquetas4}" />
+            <syncfusion:SfRadioGroup x:Name="radioGroup1">
+            <syncfusion:SfRadioButton x:Name="RB1Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB1No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+                <Label x:Name="LBPreg2" Text="¿Permite material POP?" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup2">
+                <syncfusion:SfRadioButton x:Name="RB2Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB2No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+                <Label x:Name="LBPreg3" Text="¿Permite la entrada aun con la situación del Coronavirus?" 
+                       Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup3">
+                <syncfusion:SfRadioButton x:Name="RB3Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB3No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+
+            <Label x:Name="SeccionPickerD" Text="Dispocisión del Colmadero" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+                <Picker x:Name="SBEstadoD" SelectedIndex="{Binding Disposicion}" Title="***SELECCIONAR***" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>Muy dispuesto</x:String>
+                        <x:String>Dispuesto</x:String>
+                        <x:String>No Dispuesto</x:String>
+                        <x:String>No aplica</x:String>
+                    </Picker.Items>
+            </Picker>
+
+            <Label x:Name="SeccionPickerAC" Text="Tipo de acceso al colmado" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+                <Picker x:Name="SBAcceso" SelectedIndex="{Binding Acceso}" Title="***SELECCIONAR***" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>Calle Principal</x:String>
+                        <x:String>Calle Sencundaria</x:String>
+                        <x:String>Escondido</x:String>
+                        <x:String>No aplica</x:String>
+                    </Picker.Items>
+            </Picker>
+            <Label x:Name="SeccionPickerTC" Text="Tamaño del colmado" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+                <Picker x:Name="SBTa" SelectedIndex="{Binding Tamano}" Title="***SELECCIONAR***" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>Pequeño</x:String>
+                        <x:String>Mediano</x:String>
+                        <x:String>Grande</x:String>
+                        <x:String>No aplica</x:String>
+                    </Picker.Items>
+            </Picker>
+                
+            <Label x:Name="SeccionRbCC" Text="CAPACIDAD DEL COLMADO" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+                <Label x:Name="LBPreg4" Text="¿Tiene dos o mas refrigeradores?" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup4">
+                <syncfusion:SfRadioButton x:Name="RB4Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB4No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+                
+            <Label x:Name="SeccionCC" Text="Cantidad de deliverys" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <Entry Placeholder="Ingrese cantidad de deliverys" Keyboard="Numeric" 
+                   x:Name="CantDelivery" Style="{StaticResource Key=EstiloDeEntrada2}"/>
+
+            <Label x:Name="SeccionPickerTV" Text="TIPO DE VENTANA" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+                <Label x:Name="LBTipoVentana" Text="Tipo de ventana" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+                <Picker x:Name="TipoVentana" Title="***SELECCIONAR***" BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>Vitrina</x:String>
+                        <x:String>Tramo</x:String>
+                        <x:String>Góndola</x:String>
+                        <x:String>No aplica</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="LBPreg5" Text="Cantidad de tramos" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <Entry Placeholder="Ingrese cantidad de tramos" Keyboard="Numeric" 
+                   x:Name="CantTramos" Style="{StaticResource Key=EstiloDeEntrada2}"/>
+
+            <Label x:Name="SeccionIV" Text="INICIATIVAS DE VISIBILIDAD" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+
+                <Label x:Name="LBPreg6" Text="Ristra Triple Acción" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup5">
+                <syncfusion:SfRadioButton x:Name="RB5Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB5No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+                <Label x:Name="LBPreg7" Text="Ristra Jabón Protex" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup6">
+                <syncfusion:SfRadioButton x:Name="RB6Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB6No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+                <Label x:Name="LBPreg8" Text="Ristra Crema y Cepillos" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup7">
+                <syncfusion:SfRadioButton x:Name="RB7Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB7No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+            <Label  x:Name="SeccionSM" Text="SURTIDO MANDATORIO" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+
+                <Label x:Name="LBPreg9" Text="Menta 22ml" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup8">
+                <syncfusion:SfRadioButton x:Name="RB8Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB8No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+                <Label x:Name="LBPreg10" Text="Menta 50ml" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup9">
+                <syncfusion:SfRadioButton x:Name="RB9Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB9No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+                <Label x:Name="LBPreg11" Text="Menta 100ml" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup10">
+                <syncfusion:SfRadioButton x:Name="RB10Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB10No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+            <Label x:Name="SeccionCompetencia" Text="ACTIVIDAD COMPETITIVA" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+
+                <Label x:Name="LBPreg12" Text="Brillante 150ml" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup11">
+                <syncfusion:SfRadioButton x:Name="RB11Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB11No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+                <Label x:Name="LBPreg13" Text="Ristras OB" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup12">
+                <syncfusion:SfRadioButton x:Name="RB12Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB12No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+
+                <Label x:Name="LBPreg14" Text="Ristras Downy" Style="{StaticResource Key=EstiloDeEtiquetas4}"/>
+            <syncfusion:SfRadioGroup x:Name="radioGroup13">
+                <syncfusion:SfRadioButton x:Name="RB13Si" Text="Si" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+                <syncfusion:SfRadioButton x:Name="RB13No" Text="No" UncheckedColor="White" 
+                                      CheckedColor="Green" TextColor="White"/>
+            </syncfusion:SfRadioGroup>
+           
+            <Label Text="Comentarios" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+            <Entry Placeholder="Agregue cualquier comentario" 
+                   x:Name="Comment" Style="{StaticResource Key=EstiloDeEntrada2}"/>
+               
+            <Button Text="Validar estado del colmado" x:Name="BValidacion" 
+            Style="{StaticResource Key=EstiloDeBoton}" Clicked="BValidacion_Clicked"/>
+            <Button Text="Capturar foto" x:Name="BSiguiente" 
+            Style="{StaticResource Key=EstiloDeBoton}" Clicked="BSiguiente_Clicked"/>
+            
+            
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
